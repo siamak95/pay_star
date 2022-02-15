@@ -33,15 +33,15 @@ class TransferMoney implements ITransferMoney
             $this->response = Http::withToken(Consts::CONST_TOCKEN)
                 ->acceptJson()->post('https://sandboxapi.finnotech.ir/oak/v2/clients/1/transferTo?trackId={trackId}', [
                     'deposit' => $request->desposit,
-                    'destination_number' => $request->destination_number,
+                    'destinationNumber' => $request->destination_number,
                     'mount' => $request->mount,
                     "description" => $request->description,
-                    "destination_firstname" => $request->destination_firstname,
-                    "destination_lastname" => $request->destination_lastname,
-                    "payment_number" => $request->payment_number,
-                    "source_firstname" => $request->source_firstname,
-                    "source_lastnmame" => $request->source_lastname,
-                    "reason_description" => $request->description
+                    "destinationFirstname" => $request->destination_firstname,
+                    "destinationLastname" => $request->destination_lastname,
+                    "paymentNumber" => $request->payment_number,
+                    "sourceFirstName" => $request->source_firstname,
+                    "sourceLastName" => $request->source_lastname,
+                    "reasonDescription" => $request->description
                 ]);
 
             $message = $this->loging();
