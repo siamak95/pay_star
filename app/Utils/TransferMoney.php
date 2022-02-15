@@ -34,7 +34,7 @@ class TransferMoney implements ITransferMoney
                 ->acceptJson()->post('https://sandboxapi.finnotech.ir/oak/v2/clients/1/transferTo?trackId={trackId}', [
                     'deposit' => $request->desposit,
                     'destinationNumber' => $request->destination_number,
-                    'mount' => $request->mount,
+                    'amount' => $request->mount,
                     "description" => $request->description,
                     "destinationFirstname" => $request->destination_firstname,
                     "destinationLastname" => $request->destination_lastname,
