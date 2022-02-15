@@ -41,7 +41,7 @@ class TransferMoney implements ITransferMoney
                     "paymentNumber" => $request->payment_number,
                     "sourceFirstName" => $request->source_firstname,
                     "sourceLastName" => $request->source_lastname,
-                    "reasonDescription" => $request->description
+                    "reasonDescription" => $request->reason_description
                 ]);
 
             $message = $this->loging();
